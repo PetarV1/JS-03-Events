@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(112,112,112);
+}
+
+div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    width: 20vw;
+    border: 2px solid white;
+}
+
+div label, p, span {
+    color: white;
+    text-align: center;
+}
+
+.resize, .ispis-koordinata {
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+.promjena-boje {
+    border: 10px dashed white;
+}
+
+input {
+    width: 15em;
+}
+
+.pomicanje {
+    position: relative;
+    box-sizing: content-box;
+    width: 200px;
+    height: 200px;
+}
+
+.pomicanje:focus-visible, .pomicanje:focus {
+    border: 2px solid #90EE90;
+    outline: 0;
+}
+
+.kocka {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #00BFFF;
+}
+
+@media screen and (max-width: 890px) {
+    .promjena-boje {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    input {
+        font-size: 10px;
+    }
+}
